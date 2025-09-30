@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Performance Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Student Performance Predictor</h1>
+        {% if error %}
+            <div class="error">{{ error }}</div>
+        {% endif %}
+        
+        <div class="instructions">
+            <p>Please enter the student's information and test scores below.</p>
+            <p>All scores should be between 0 and 100.</p>
+        </div>
+
+        <form action="{{ url_for('predict') }}" method="post">
+            <h2>Student Information</h2>
+            <div class="form-group">
+                <label>Gender:</label>
+                <select name="gender" required>
+                    <option value="female">Female</option>
+                    <option value="male">Male</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Race/Ethnicity:</label>
+                <select name="race" required>
+                    <option value="group A">Group A</option>
+                    <option value="group B">Group B</option>
+                    <option value="group C">Group C</option>
+                    <option value="group D">Group D</option>
+                    <option value="group E">Group E</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Parental Education:</label>
+                <select name="education" required>
+                    <option value="some high school">Some High School</option>
+                    <option value="high school">High School</option>
+                    <option value="some college">Some College</option>
+                    <option value="associate's degree">Associate's Degree</option>
+                    <option value="bachelor's degree">Bachelor's Degree</option>
+                    <option value="master's degree">Master's Degree</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Lunch Type:</label>
+                <select name="lunch" required>
+                    <option value="standard">Standard</option>
+                    <option value="free/reduced">Free/Reduced</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Test Preparation:</label>
+                <select name="test_prep" required>
+                    <option value="none">None</option>
+                    <option value="completed">Completed</option>
+                </select>
+            </div>
+
+            <h2>Test Scores (0-100)</h2>
+            <div class="score-info">
+                <p>Enter scores between 0 and 100 for each subject.</p>
+            </div>
+            
+            <div class="form-group">
+                <label>Math Score: <span class="score-range">(0-100)</span></label>
+                <input type="number" name="math" min="0" max="100" required>
+            </div>
+            <div class="form-group">
+                <label>Reading Score: <span class="score-range">(0-100)</span></label>
+                <input type="number" name="reading" min="0" max="100" required>
+            </div>
+            <div class="form-group">
+                <label>Writing Score: <span class="score-range">(0-100)</span></label>
+                <input type="number" name="writing" min="0" max="100" required>
+            </div>
+            <button type="submit">Predict Performance</button>
+        </form>
+    </div>
+</body>
+</html>

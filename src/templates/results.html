@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Student Performance Prediction</h1>
+        <div class="results">
+            <h2>Predicted Average Score</h2>
+            <div class="prediction">{{ "%.2f"|format(prediction) }}</div>
+            <a href="{{ url_for('index') }}">
+                <button type="button">Make Another Prediction</button>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
