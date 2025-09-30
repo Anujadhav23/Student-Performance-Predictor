@@ -142,23 +142,13 @@ student-performance-predictor/
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- Dataset source: Kaggle
-- Inspiration: Educational Data Mining
-- Contributors and Open Source Community
-
 ## 👤 Author
 
-Your Name
-- GitHub: [@yourusername](https://github.com/yourusername)
-- LinkedIn: [Your Name](https://linkedin.com/in/yourprofile)
+Aniket Jadhav
+- GitHub: [@Anujadhav23](https://github.com/Anujadhav23)
+- LinkedIn: [Aniket Jadhav](https://www.linkedin.com/in/aniket-jadhav-99969331b)
 
 ## 🔗 Links
 
-- Project Link: [https://github.com/yourusername/student-performance-predictor](https://github.com/yourusername/student-performance-predictor)
+- Project Link: [https://github.com/Anujadhav23/student-performance-predictor](https://github.com/Anujadhav23/student-performance-predictor)
 - Dataset Link: [Kaggle - Students Performance in Exams](https://www.kaggle.com/datasets/spscientist/students-performance-in-exams)
